@@ -1,2 +1,2 @@
 # css-grid-slim
-Multipurpose CSS Grid Slim
+Multipurpose CSS Grid Slim.
