@@ -1,0 +1,243 @@
+<!doctype html>
+<html dir="ltr" lang="pt-br">
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index,follow">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta name="theme-color" content="#0098DA">
+
+<meta name="author" content="Mateus Salvi">
+<meta name="copyright" content="Mateus Salvi">
+<meta name="reply-to" content="salvi.mateus@gmail.com">
+
+<meta name="description" lang="pt-br" content="Descrição_do_site">
+<meta name="keywords" lang="pt-br" content="Tags_do_site">
+
+<meta name="URL" content="http://dominio.com.br">
+<!--<link rel="canonical" href="http://dominio.com.br">-->
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<title>CSSGrid</title>
+
+<!-- Open Graph meta tags -->
+<meta property="og:site_name" content="Título_do_Site">
+<meta property="og:title" content="Título_da_Página_Atual">
+<meta property="og:description" content="Descrição_da_Página_Atual">
+<meta property="og:image" content="http://imagem_da_pagina_atual.jpg">
+<meta property="og:url" content="http://url_da_pagina_atual.com.br">
+<meta property="og:type" content="website ou article">
+<!-- End. Open Graph meta tags -->
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/grid.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- End. CSS -->
+
+</head>
+
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<!--<body itemscope="itemscope" itemtype="http://schema.org/Product">-->
+
+<!-- Scroll Top -->
+<a class="scrolltop"><i class="fa fa-arrow-circle-up"></i></a>
+<!-- End. Scroll Top -->
+
+<!-- Site Container -->
+<div id="wrap" class="clearfix">
+
+<!-- Header -->
+<header id="header" class="clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization" itemprop="manufacturer">
+	<div class="container responsive">
+
+		<div class="grid_12">
+			<h4><a class="fancybox" href="img/logo-centive.png">Logo</a></h4>
+		</div>
+
+	</div>
+</header>
+<!-- End. Header -->
+
+<!-- Navigation -->
+<nav id="menu" class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="container responsive">
+
+		<div class="grid_12">
+			<ul class="clearfix">
+				<li><a href="">Menu</a></li>
+				<li><a href="">Menu</a>
+					<ul>
+						<li><a href="">Menu</a></li>
+						<li><a href="">Menu</a>
+							<ul>
+								<li><a href="">Menu</a></li>
+								<li><a href="">Menu</a></li>
+								<li><a href="">Menu</a></li>
+							</ul>
+						</li>
+						<li><a href="">Menu</a></li>
+					</ul>
+				</li>
+				<li><a href="">Menu</a></li>
+				<li><a href="">Menu</a></li>
+			</ul>
+		</div>
+
+	</div>
+</nav>
+<!-- End. Navigation -->
+
+<!-- Middle -->
+<div id="middle" class="clearfix">
+	<div class="container responsive content">
+
+		<!-- Main -->
+		<div class="grid_8">
+			<main role="main">
+				<!-- Breadcrumb -->
+				<div class="grid_12 breadcrumb" itemprop="breadcrumb">
+					<span prefix="v: http://rdf.data-vocabulary.org/#">
+						<span typeof="v:Breadcrumb"><a href="http://yoast.com" rel="v:url" property="v:title">Home</a></span>
+						<span class="sep">»</span>
+						<span typeof="v:Breadcrumb"><a href="http://yoast.com/wordpress/" rel="v:url" property="v:title">WordPress</a></span>
+						<span class="sep">»</span>
+						<span typeof="v:Breadcrumb"><a href="http://yoast.com/wordpress/plugins/" rel="v:url" property="v:title">WordPress Plugins</a></span>
+						<span class="sep">»</span>
+						<span typeof="v:Breadcrumb"><span property="v:title">Título da Página</span></span>
+					</span>
+				</div>
+				<!-- End. Breadcrumb -->
+
+				<!-- Article -->
+				<article class="grid_12">
+					<!-- Title -->
+					<header class="grid_12">
+						<h1 itemprop="name">h1 (Tema Principal da Página)</h1>
+					</header>
+					<!-- End. Title -->
+
+					<!-- Content -->
+					<div class="grid_12" itemprop="description">
+						<h2>h2</h2>
+							<h3>h3</h3>
+								<h4>h4 (utilize para elementos fixos (sidebar, etc.)</h4>
+									<h5>h5</h5>
+										<h6>h6 (respeite a ordem de menu e sub menu, não coloque um h6 (sub menu) sem ser a sequência de um h5 (menu))</h6>
+										<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<p>Conteúdo principal.</p>
+					</div>
+					<!-- End. Content -->
+
+					<!-- Other -->
+					<div class="grid_12">
+						<p>Demais divs que não fazem parte do conteúdo principal (social, etc.).</p>
+					</div>
+					<!-- End. Other -->
+				</article>
+				<!-- End. Article -->
+			</main>
+		</div>
+		<!-- End. Main -->
+
+		<!-- Sidebar -->
+		<aside class="grid_4 last" role="complementary">
+			<!-- Sidebar Item -->
+			<section class="grid_12">
+				<div class="grid_12">
+					<h4>Sidebar item</h4>
+					<p>Sidebar conteúdo</p>
+				</div>
+			</section>
+			<!-- End. Sidebar Item -->
+		</aside>
+		<!-- End. Sidebar -->
+
+	</div>
+</div>
+<!-- End. Middle -->
+
+<!-- Footer -->
+<footer id="footer" class="clearfix" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<div class="container responsive">
+
+		<div class="grid_12">
+			<h4>Base</h4>
+		</div>
+
+	</div>
+</footer>
+<!-- End. Footer -->
+
+</div>
+<!-- End. Site Container -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.3.0/css/font-awesome.min.css">
+<!-- End. Font Awesome -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- End. jQuery -->
+
+<!-- fancyBox -->
+<link rel="stylesheet" type="text/css" href="js/fancybox/fancybox.css">
+<script type="text/javascript" src="js/fancybox/fancybox.js"></script>
+<!-- End. fancyBox -->
+
+<!-- Responsive Menu -->
+<script type="text/javascript" src="js/resmenu.js"></script>
+<!-- End. Responsive Menu -->
+
+<!-- Menu -->
+<script type="text/javascript" src="js/superfish.js"></script>
+<!-- End. Menu -->
+
+<!-- Ready -->
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		// fancyBox
+		$('.fancybox').fancybox();
+		$('.iframebox').fancybox({'width':800,'height':450,'type':'iframe'});
+
+		// Responsive Menu
+		$('#menu ul').ReSmenu({
+			menuClass:		'responsive_menu',		// Responsive menu class
+			selectId:			'resmenu',						// select ID
+			textBefore:		false,								// Text to add before the mobile menu
+			selectOption:	'Menu - Escolha uma página aqui',	// First select option
+			activeClass:	'current-menu-item',	// Active menu li class
+			maxWidth:			960										// Size to which the menu is responsive
+		});
+
+		// Menu
+		$('#menu ul').superfish();
+
+		// Scroll to top show and hide
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+				$('.scrolltop').fadeIn();
+			} else {
+				$('.scrolltop').fadeOut();
+			}
+		});
+		// Scroll to top animate
+		$('.scrolltop').click(function(){
+			$('html, body').animate({ scrollTop: 0 }, 400);
+			return false;
+		});
+	});
+</script>
+<!-- End. Ready -->
+
+</body>
+</html>

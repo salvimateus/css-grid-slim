@@ -1,0 +1,17 @@
+﻿CSS GRID SLIM CHANGELOG
+by Mateus Salvi
+http://salvimateus.com
+
+CHANGELOG
+
+Version 0.0.2 - 18/07/2015
+* ADDED:
+* FIXED:
+* UPDATED:
+* REMOVED:
+
+Version 0.0.1 - 18/07/2015
+* ADDED:
+* FIXED:
+* UPDATED:
+* REMOVED:

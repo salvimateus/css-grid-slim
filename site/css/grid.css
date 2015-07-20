@@ -1,0 +1,216 @@
+/*
+ * CSS Grid Document - Grid - cssgrid.com.br ©
+ */
+
+/*
+ * #----- Container -----#
+ */
+
+.container {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.250em;
+  padding-left: 1.250em;
+}
+
+/*
+ * #----- Grid -----#
+ */
+
+ .container [class*='grid_'] { margin-right: 2%; }
+ .container [class*='grid_'].last { margin-right: 0; }
+ .container .grid_1 { width: 6.5%; }
+ .container .grid_2 { width: 15%; }
+ .container .grid_3 { width: 23.5%; }
+ .container .grid_4 { width: 32%; }
+ .container .grid_5 { width: 40.5%; }
+ .container .grid_6 { width: 49%; }
+ .container .grid_7 { width: 57.5%; }
+ .container .grid_8 { width: 66%; }
+ .container .grid_9 { width: 74.5%; }
+ .container .grid_10 { width: 83%; }
+ .container .grid_11 { width: 91.5%; }
+ .container .grid_12 { width: 100%; margin-right: 0; }
+
+ .container .col_1 { width: 8.333333333333334%; }
+ .container .col_2 { width: 16.666666666666668%; }
+ .container .col_3 { width: 25%; }
+ .container .col_4 { width: 33.333333333333336%; }
+ .container .col_5 { width: 41.666666666666664%; }
+ .container .col_6 { width: 50%; }
+ .container .col_7 { width: 58.333333333333336%; }
+ .container .col_8 { width: 66.66666666666667%; }
+ .container .col_9 { width: 75%; }
+ .container .col_10 { width: 83.33333333333333%; }
+ .container .col_11 { width: 91.66666666666667%; }
+ .container .col_12 { width: 100%; }
+
+.container [class*='grid_'],
+.container [class*='col_'] { float: left; }
+
+.container [class*='grid_'].center,
+.container [class*='col_'].center {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container [class*='grid_'] embed,
+.container [class*='grid_'] iframe,
+.container [class*='grid_'] img,
+.container [class*='grid_'] object,
+.container [class*='grid_'] video,
+.container [class*='col_'] embed,
+.container [class*='col_'] iframe,
+.container [class*='col_'] img,
+.container [class*='col_'] object,
+.container [class*='col_'] video {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/*
+ * #----- Useful -----#
+ */
+
+.relative { position: relative; }
+
+.row { margin-bottom: 20px; }
+
+.onerow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nomb { margin-bottom: 0 !important; }
+
+.fleft { float: left; }
+.fright { float: right; }
+
+.txtleft { text-align: left !important; }
+.txtright { text-align: right !important; }
+.txtcenter { text-align: center !important; }
+.txtjust { text-align: justify !important; }
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+.aligncenter {
+  display: block;
+	margin: 0 auto 20px auto;
+}
+
+/*
+ * #----- Clear -----#
+ */
+
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+[class*='grid_']:before,
+[class*='grid_']:after,
+[class*='col_']:before,
+[class*='col_']:after {
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  content: '\0020';
+}
+
+.clearfix:after,
+.container:after,
+[class*='grid_']:after,
+[class*='col_']:after {
+  clear: both;
+}
+
+.clearfix,
+.container,
+[class*='grid_'],
+[class*='col_'] {
+  zoom: 1;
+}
+
+/*
+ * #----- Mobile -----#
+ */
+
+@media all and (max-width:960px) {
+
+  .responsive > [class*='grid_'].adapt,
+	.responsive > [class*='col_'].adapt {
+    float: none;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .no_big { display: none !important; }
+
+  .row_big { margin-bottom: 20px !important; }
+
+  .center_big { text-align: center !important; }
+
+}
+
+@media all and (max-width:720px) {
+
+  .responsive > [class*='grid_'].adapt > [class*='grid_'],
+	.responsive > [class*='grid_'].adapt > [class*='col_'],
+	.responsive > [class*='col_'].adapt > [class*='col_'],
+	.responsive > [class*='col_'].adapt > [class*='grid_'],
+  .responsive > [class*='grid_'].center,
+	.responsive > [class*='col_'].center {
+    float: none;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .no_mid { display: none !important; }
+
+  .row_mid { margin-bottom: 20px !important; }
+
+  .center_mid { text-align: center !important; }
+
+}
+
+@media all and (max-width:480px) {
+
+  .responsive > [class*='grid_'],
+	.responsive > [class*='col_'] {
+    float: none;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .no_small { display: none !important; }
+
+  .row_small { margin-bottom: 20px !important; }
+
+  .center_small { text-align: center !important; }
+
+}

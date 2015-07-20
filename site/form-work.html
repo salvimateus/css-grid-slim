@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-br, pt" dir="ltr">
+<head>
+<meta http-equiv="Content-Language" content="pt-br, pt">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Design e Desenvolvimento - MagicSite® Internet Solutions - (17) 3211-6600 / magicsite.com.br © 2013">
+<meta name="copyright" content="MagicSite® Internet Solutions">
+<meta name="reply-to" content="magicsite@magicsite.com.br">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta name="description" lang="pt-br, pt" content="Descrição_do_site">
+<meta name="keywords" lang="pt-br, pt" content="Tags_do_site">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="URL" content="http://dominio.com.br">
+<!--<link rel="canonical" href="http://dominio.com.br">-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<title>CSS Grid</title>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/grid.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<!-- End. CSS -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- End. jQuery -->
+
+<!-- fancyBox -->
+<link rel="stylesheet" type="text/css" href="js/fancybox/fancybox.css" media="screen">
+<script type="text/javascript" src="js/fancybox/fancybox.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.fancybox').fancybox();
+		$('.iframe480').fancybox({'width':480,'height':360,'type':'iframe'});
+	});
+</script>
+<!-- End. fancyBox -->
+
+<!-- Mask -->
+<script type="text/javascript" src="js/form/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/form/jquery.price-format.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+
+		$('#nascimento').mask('99/99/9999');
+		$('#telefone').mask('(99) 9999-9999');
+		$('#celular').focusout(function () {
+			var phone, element;
+			element = $(this);
+			element.unmask();
+			phone = element.val().replace(/\D/g,'');
+			if (phone.length > 10) {
+				element.mask('(99) 99999-999?9');
+			} else {
+				element.mask('(99) 9999-9999?9');
+			}
+		}).trigger('focusout');
+		$('#salario').priceFormat({
+			prefix:'R$ ',
+			centsSeparator:',',
+			thousandsSeparator:'.'
+		});
+
+	});
+</script>
+<!-- End. Mask -->
+
+<!-- Validation -->
+<script type="text/javascript" src="js/form/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/form/jquery.validate.additional.js"></script>
+<script type="text/javascript" src="js/form/jquery.validate.pt-br.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+
+		$('form').validate({
+			errorElement: 'span',
+			wrapper: 'div',
+			errorPlacement: function(error, element) {
+			if (element.attr('type') == 'checkbox' || element.attr('type') == 'radio')
+				error.appendTo(element.parents().eq(1)),
+				error.addClass('required');
+			else
+				error.insertAfter(element),
+				error.addClass('required');
+			},
+			rules:{
+				nome:{
+					required:true,
+					minlength:3
+				},
+				sobrenome:{
+					required:true,
+					minlength:3
+				},
+				email:{
+					required:true,
+					email:true
+				},
+				email2:{
+					required:true,
+					equalTo:'#email'
+				},
+				sexo:{
+					required:true
+				},
+				telefone:{
+					required:true
+				},
+				celular:{
+					required:true
+				},
+				nascimento:{
+					required:true,
+					dateBR:true
+				},
+				civil:{
+					required:true
+				},
+				uf:{
+					required:true
+				},
+				cidade:{
+					required:true,
+					minlength:3
+				},
+				cargo:{
+					required:true
+				},
+				disponibilidade:{
+					required:true
+				},
+				salario:{
+					required:true,
+					cRange:['700,00','1.500,00']
+				},
+				escolaridade:{
+					required:true
+				},
+				observacoes:{
+					minlength:3
+				},
+				curriculo:{
+					required:true
+				},
+			},
+			messages:{
+				email2:{
+					required:'Confirme seu email',
+					equalTo:'O email deve ser igual.'
+				},
+			},
+		});
+
+	});
+</script>
+<!-- End. Validation -->
+
+<!-- Textarea -->
+<script type="text/javascript" src="js/form/jquery.autosize.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('textarea').autosize({append:'\n'});
+	});
+</script>
+<!-- Fim. Textarea -->
+
+</head>
+
+<body>
+
+<!-- Form Container -->
+<div class="container cssform dftheme content">
+	<!-- Form Elements -->
+
+	<form id="cssgrid_form">
+
+	<!-- Form Title -->
+	<h2>Trabalhe Conosco</h2>
+	<!-- End. Form Title -->
+
+	<!-- Form Padding -->
+	<div class="grid_8 center">
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="nome" class="lbltxt">Nome</label>
+			</div>
+			<div class="grid_3">
+				<input id="nome" name="nome" type="text" placeholder="Digite seu nome">
+			</div>
+			<div class="grid_2">
+				<label for="sobrenome" class="lbltxt">Sobrenome</label>
+			</div>
+			<div class="grid_3">
+				<input id="sobrenome" name="sobrenome" type="text" placeholder="Digite seu sobrenome">
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Digite seu nome e sobrenome</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="email" class="lbltxt">Email</label>
+			</div>
+			<div class="grid_4">
+				<input id="email" name="email" type="text" placeholder="Digite seu email">
+			</div>
+			<div class="grid_4">
+				<input id="email2" name="email2" type="text" placeholder="Confirme seu email">
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Digite seu email</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label class="lbltxt">Sexo</label>
+			</div>
+			<div class="grid_4">
+				<span class="optionblock">
+					<input id="masculino" name="sexo" type="radio">
+					<label for="masculino">Masculino</label>
+				</span>
+			</div>
+			<div class="grid_4">
+				<span class="optionblock">
+					<input id="feminino" name="sexo" type="radio">
+					<label for="feminino">Feminino</label>
+				</span>
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Selecione seu sexo</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="telefone" class="lbltxt">Telefone</label>
+			</div>
+			<div class="grid_3">
+				<input id="telefone" name="telefone" type="text" placeholder="Telefone">
+			</div>
+			<div class="grid_2">
+				<label for="celular" class="lbltxt">Celular</label>
+			</div>
+			<div class="grid_3">
+				<input id="celular" name="celular" type="text" placeholder="Celular">
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Informe seu telefone e celular</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="nascimento" class="lbltxt">Nascimento</label>
+			</div>
+			<div class="grid_3">
+				<input id="nascimento" name="nascimento" type="text" placeholder="Nascimento">
+			</div>
+			<div class="grid_2">
+				<label for="civil" class="lbltxt">Estado Civil</label>
+			</div>
+			<div class="grid_3">
+				<select id="civil" name="civil">
+					<option value="">Estado Civil</option>
+					<option value="Solteiro(a)">Solteiro(a)</option>
+					<option value="Casado(a)">Casado(a)</option>
+					<option value="Divorciado(a)">Divorciado(a)</option>
+					<option value="Outro">Outro</option>
+				</select>
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Informe seu nascimento e estado civil</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="uf" class="lbltxt">Estado</label>
+			</div>
+			<div class="grid_3">
+				<select id="uf" name="uf">
+					<option value="">UF</option>
+					<option value="AC">AC</option>
+					<option value="AL">AL</option>
+					<option value="AM">AM</option>
+					<option value="AP">AP</option>
+					<option value="BA">BA</option>
+					<option value="CE">CE</option>
+					<option value="DF">DF</option>
+					<option value="ES">ES</option>
+					<option value="GO">GO</option>
+					<option value="MA">MA</option>
+					<option value="MG">MG</option>
+					<option value="MS">MS</option>
+					<option value="MT">MT</option>
+					<option value="PA">PA</option>
+					<option value="PB">PB</option>
+					<option value="PE">PE</option>
+					<option value="PI">PI</option>
+					<option value="PR">PR</option>
+					<option value="RJ">RJ</option>
+					<option value="RN">RN</option>
+					<option value="RO">RO</option>
+					<option value="RR">RR</option>
+					<option value="RS">RS</option>
+					<option value="SC">SC</option>
+					<option value="SE">SE</option>
+					<option value="SP">SP</option>
+					<option value="TO">TO</option>
+				</select>
+			</div>
+			<div class="grid_2">
+				<label for="cidade" class="lbltxt">Cidade</label>
+			</div>
+			<div class="grid_3">
+				<input id="cidade" name="cidade" type="text" placeholder="Cidade">
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Informe seu estado e cidade</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="cargo" class="lbltxt">Cargo</label>
+			</div>
+			<div class="grid_3">
+				<select id="cargo" name="cargo">
+					<option value="">Cargo pretendido</option>
+					<option value="Designer">Designer</option>
+				</select>
+			</div>
+			<div class="grid_2">
+				<label for="disponibilidade" class="lbltxt">Disponibilidade</label>
+			</div>
+			<div class="grid_3">
+				<select id="disponibilidade" name="disponibilidade">
+					<option value="">Disponibilidade</option>
+					<option value="Imediata">Imediata</option>
+					<option value="15 dias">15 dias</option>
+					<option value="30 dias">30 dias</option>
+				</select>
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Informe o cargo pretendido e disponibilidade</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="salario" class="lbltxt">Salário</label>
+			</div>
+			<div class="grid_3">
+				<input id="salario" name="salario" type="text" placeholder="Pretenção salarial">
+			</div>
+			<div class="grid_2">
+				<label for="escolaridade" class="lbltxt">Escolaridade</label>
+			</div>
+			<div class="grid_3">
+				<select id="escolaridade" name="escolaridade">
+					<option value="">Escolaridade</option>
+					<option value="Fundamental Completo">Fundamental Completo</option>
+					<option value="Fundamental Incompleto">Fundamental Incompleto</option>
+					<option value="Médio Completo">Médio Completo</option>
+					<option value="Médio Incompleto">Médio Incompleto</option>
+					<option value="Superior Completo">Superior Completo</option>
+					<option value="Superior Incompleto">Superior Incompleto</option>
+					<option value="Superior Cursando">Superior Cursando</option>
+					<option value="Mestrado">Mestrado</option>
+					<option value="Doutorado">Doutorado</option>
+				</select>
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Informe sua pretenção salarial e escolaridade</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+		<!-- Form Row -->
+		<div class="responsive rowform">
+			<div class="grid_2">
+				<label for="observacoes" class="lbltxt">Observações</label>
+			</div>
+			<div class="grid_8">
+				<textarea id="observacoes" name="observacoes" rows="3" placeholder="Se desejar, digite alguma observação sobre você"></textarea>
+			</div>
+			<div class="grid_2 last">
+				<span class="brief">Se desejar, digite alguma observação sobre você</span>
+			</div>
+		</div>
+		<!-- End. Form Row -->
+
+	</div>
+	<!-- End. Form Padding -->
+
+	<!-- Form Buttons -->
+	<div class="grid_12">
+		<input class="fright" type="submit" value="Enviar">
+		<input class="fleft" type="button" value="Cancelar" onClick="javascript:history.back(-1)">
+		<input class="fleft" type="reset" value="Limpar">
+	</div>
+	<!-- End. Form Buttons -->
+
+	</form>
+
+	<!-- End. Form Elements -->
+</div>
+<!-- End. Form Container -->
+
+</body>
+</html>

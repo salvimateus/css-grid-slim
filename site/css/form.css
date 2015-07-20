@@ -1,0 +1,248 @@
+/*
+ * CSS Grid Document - Form - cssgrid.com.br ©
+ */
+
+/*
+ * #----- Elements -----#
+ */
+
+.cssform input[type='text'],
+.cssform input[type='email'],
+.cssform input[type='password'],
+.cssform input[type='url'],
+.cssform select,
+.cssform textarea {
+  font-size: 1em;
+  line-height: 1.5;
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+
+  border: 1px solid;
+}
+.cssform select {
+  padding: 10px 5px;
+}
+.cssform textarea {
+  min-width: 100%;
+  max-width: 100%;
+
+  -webkit-transition: height 0.2s;
+     -moz-transition: height 0.2s;
+          transition: height 0.2s;
+}
+.cssform input[type='radio'],
+.cssform input[type='checkbox'] {
+  margin: 0 10px;
+}
+
+/*
+ * #----- Button -----#
+ */
+
+.cssform input[type='submit'],
+.cssform input[type='button'],
+.cssform input[type='reset'],
+.cssform button {
+  margin: 0 20px 20px 0;
+  padding: 10px 20px;
+
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+/*
+ * #----- Essential -----#
+ */
+
+.cssform .optionblock {
+  display: table;
+
+  width: 100%;
+
+  border: 1px solid;
+}
+.cssform .optionblock label {
+  display: table-cell;
+
+  width: 100%;
+  padding: 10px 0;
+}
+.cssform .rowform {
+  margin: 0 0 20px 0;
+}
+
+/*
+ * #----- Validation -----#
+ */
+
+.cssform .lbltxt {
+  font-size: 1em;
+  line-height: 1.5;
+
+  display: block;
+
+  padding: 10px;
+
+  text-align: right;
+}
+.cssform .brief {
+  font-size: 0.75em;
+  line-height: 1.2;
+
+  display: block;
+
+  padding: 5px 10px;
+}
+.cssform .required {
+  font-size: 0.75em;
+  line-height: 1.5;
+
+  display: block;
+
+  width: 100%;
+  margin: 1px 0 0 0;
+  padding: 0 5px;
+
+  text-align: center;
+
+  border: 1px solid;
+}
+/*
+ * #----- Default Theme -----#
+ */
+
+.dftheme .optionblock {
+  border-color: #cccccc;
+  background: #ffffff;
+}
+.dftheme .optionblock label {
+  color: #666666;
+}
+.dftheme input[type='text'],
+.dftheme input[type='email'],
+.dftheme input[type='password'],
+.dftheme input[type='url'],
+.dftheme select,
+.dftheme textarea {
+  color: #666666;
+  border-color: #cccccc;
+  background-color: #ffffff;
+}
+.dftheme input[type='text']:focus,
+.dftheme input[type='email']:focus,
+.dftheme input[type='password']:focus,
+.dftheme input[type='url']:focus,
+.dftheme select:focus,
+.dftheme textarea:focus {
+  color: #333333;
+  border-color: #666666;
+}
+.dftheme input[type='submit'],
+.dftheme input[type='button'],
+.dftheme input[type='reset'],
+.dftheme button {
+  color: #ffffff;
+  background-color: #333333;
+}
+.dftheme input[type='submit']:hover,
+.dftheme input[type='button']:hover,
+.dftheme button:hover {
+  background-color: #666666;
+}
+.dftheme input[type='reset'] {
+  color: #666666;
+  background-color: #ffffff;
+}
+.dftheme input[type='reset']:hover {
+  color: #cc0000;
+  background-color: #ffffff;
+}
+.dftheme .lbltxt {
+  color: #666666;
+}
+.dftheme .brief {
+  color: #009933;
+}
+.dftheme .required {
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: #ffcccc;
+}
+.dftheme ::placeholder {
+  color: #777777;
+}
+.dftheme ::-moz-placeholder {
+  color: #777777;
+}
+.dftheme ::-webkit-input-placeholder {
+  color: #777777;
+}
+/*
+ * #----- Clear -----#
+ */
+
+.rowform:before,
+.rowform:after {
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+
+  width: 0;
+  height: 0;
+
+  content: '\0020';
+}
+.rowform:after {
+  clear: both;
+}
+.rowform {
+  zoom: 1;
+}
+
+/*
+ * #----- Mobile -----#
+ */
+
+@media all and (max-width:720px) {
+  .cssform [class*='grid_'],
+  .cssform [class*='col_'] {
+    float: none;
+
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .cssform input[type='submit'],
+  .cssform input[type='button'],
+  .cssform input[type='reset'],
+  .cssform button {
+    float: none;
+
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .dftheme .lbltxt {
+    margin-bottom: 1px;
+
+    text-align: left;
+
+    background-color: #cccccc;
+  }
+
+  .dftheme input[type='text'],
+  .dftheme input[type='email'],
+  .dftheme input[type='password'],
+  .dftheme input[type='url'],
+  .dftheme select,
+  .dftheme textarea,
+  .dftheme .optionblock {
+    margin-bottom: 1px;
+  }
+}

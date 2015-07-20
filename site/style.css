@@ -1,0 +1,329 @@
+/*
+Theme Name: Título_do_Site
+Theme URI: http://centive.com.br
+Description: Design e Desenvolvimento por Mateus Salvi / contato@centive.com.br / centive.com.br © 2015
+Version: 1.0
+Author: Mateus Salvi
+Author URI: http://salvimateus.com
+Tags: tag1, tag2, tag3
+*/
+
+/*
+ * #-------------------- Basic HTML --------------------#
+ */
+body,
+input,
+button,
+textarea,
+select,
+label,
+legend {
+  font: normal normal normal 100%/1.5 Arial, Helvetica, sans-serif;
+
+  color: #333333;
+}
+body {
+  background: #ffffff url() no-repeat center top fixed;
+}
+body ::placeholder {
+  color: #777777;
+}
+
+a {
+  text-decoration: underline;
+
+  color: #0000ff;
+}
+a:hover {
+  color: #ff0000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  line-height: 1;
+}
+
+small {
+  font-size: 80%;
+}
+
+/*
+ * #-------------------- Menu --------------------#
+ */
+#menu {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Main Menu */
+#menu ul {
+}
+#menu ul li {
+  position: relative;
+
+  display: block;
+  float: left;
+}
+#menu ul li:first-child {
+}
+#menu ul li a {
+  display: block;
+  float: left;
+}
+#menu ul li a:hover {
+}
+
+/* Superfish Essenciais */
+#menu ul li.sfHover > a {
+  color: #ffffff;
+  border-color: #00548a;
+  background: #0070b9;
+}
+#menu ul ul li.sfHover > a {
+  background: #0087df;
+}
+#menu ul li.current-menu-item > a,
+#menu ul li.current-page-ancestor > a,
+#menu ul li.current-menu-ancestor > a {
+  color: #4b91be;
+  background: #ffffff;
+}
+#menu li:hover ul,
+#menu li.sfHover ul {
+  z-index: 999;
+}
+#menu li:hover li ul,
+#menu li.sfHover li ul {
+  top: -999em;
+}
+#menu li li:hover li ul,
+#menu li li.sfHover li ul {
+  top: -999em;
+}
+#menu li li li:hover ul,
+#menu li li li.sfHover ul {
+  top: 0;
+}
+#menu li ul {
+  position: absolute;
+  top: -999em;
+}
+#menu li ul li {
+  width: 100%;
+}
+
+/* Superfish Posição */
+#menu li:hover ul,
+#menu li.sfHover ul {
+  top: 41px;
+  left: 0;
+}
+#menu li li:hover ul,
+#menu li li.sfHover ul {
+  top: 0;
+  left: 221px;
+}
+
+/* Dropdown */
+#menu ul li ul {
+  float: none;
+
+  width: 220px;
+  margin: 0;
+}
+#menu ul li ul li {
+  margin: 0 0 1px 0;
+}
+#menu ul li ul li:first-child {
+}
+#menu ul li ul li a {
+  float: none;
+
+  color: #ffffff;
+  background: #0070b9;
+}
+#menu ul li ul li a:hover {
+  background: #0087df;
+}
+
+/* Sub Dropdown */
+#menu ul li ul li ul {
+}
+#menu ul li ul li ul li a {
+  background: #0070b9;
+}
+#menu ul li ul li ul li a:hover {
+  background: #0087df;
+}
+
+/*
+ * #-------------------- Content --------------------#
+ */
+/* Margin */
+.content p,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content ol,
+.content ul,
+.content li,
+.content table,
+.content fieldset,
+.content article {
+  margin: 0 0 20px 0;
+}
+.content ol li:first-child,
+.content ul li:first-child {
+  margin-top: 20px;
+}
+
+/* Elements */
+.content h1 {
+}
+.content h2 {
+}
+.content h3 {
+}
+.content h4,
+.content h5,
+.content h6 {
+}
+.content ol li {
+  margin-left: 1.875em;
+
+  list-style: decimal;
+}
+.content ul li {
+  margin-left: 1.875em;
+
+  list-style: disc;
+}
+
+/* Forms */
+.content input[type='text'],
+.content input[type='email'],
+.content input[type='password'],
+.content input[type='url'],
+.content select,
+.content textarea {
+  font-size: 1em;
+
+  width: 50%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 8px 5px;
+
+  letter-spacing: 1px;
+
+  border: 1px solid #cccccc;
+  background: #ffffff;
+}
+.content textarea {
+  min-width: 75%;
+  max-width: 75%;
+
+  -webkit-transition: height 0.2s;
+     -moz-transition: height 0.2s;
+          transition: height 0.2s;
+}
+.content input[type='submit'],
+.content input[type='button'],
+.content input[type='reset'],
+.content button {
+  margin: 0 20px 20px 0;
+  padding: 9px 20px;
+
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+
+  color: #ffffff;
+  background-color: #999999;
+}
+.content input[type='submit']:hover,
+.content input[type='button']:hover,
+.content input[type='reset']:hover,
+.content button:hover {
+  background-color: #666666;
+}
+
+/*
+ * #-------------------- Sidebar --------------------#
+ */
+#aside_left {
+}
+#aside_right {
+}
+
+/*
+ * #-------------------- Header --------------------#
+ */
+#header {
+  position: relative;
+  z-index: 999;
+}
+
+/*
+ * #-------------------- Middle --------------------#
+ */
+#middle {
+}
+
+/*
+ * #-------------------- Footer --------------------#
+ */
+#footer {
+}
+.scrolltop {
+  font-size: 2.2em;
+  line-height: 1;
+
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  bottom: 20px;
+
+  display: none;
+
+          opacity: 0.5;
+
+     -moz-opacity: 0.5;
+  -webkit-opacity: 0.5;
+}
+.scrolltop:hover {
+          opacity: 1;
+
+     -moz-opacity: 1;
+  -webkit-opacity: 1;
+}
+
+/*
+ * #-------------------- Mobile --------------------#
+ */
+
+@media all and (max-width:960px) {
+}
+
+@media all and (max-width:720px) {
+}
+
+@media all and (max-width:480px) {
+}
+
+@media all and (max-width:320px) {
+}
+
+/*
+ * #-------------------- Print --------------------#
+ */
+@media print {
+}

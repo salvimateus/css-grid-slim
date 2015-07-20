@@ -1,0 +1,190 @@
+<!doctype html>
+<html dir="ltr" lang="pt-br">
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index,follow">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta name="theme-color" content="#0098DA">
+
+<meta name="author" content="Mateus Salvi">
+<meta name="copyright" content="Mateus Salvi">
+<meta name="reply-to" content="salvi.mateus@gmail.com">
+
+<meta name="description" lang="pt-br" content="Descrição_do_site">
+<meta name="keywords" lang="pt-br" content="Tags_do_site">
+
+<meta name="URL" content="http://dominio.com.br">
+<!--<link rel="canonical" href="http://dominio.com.br">-->
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/grid.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- End. CSS -->
+
+<title>CSSGrid</title>
+
+<style>
+.container{
+  border: 1px solid #ccc;
+  padding-top: 20px;
+  margin: 40px auto;
+}
+
+.container [class*="grid_"],
+.container [class*="col_"]{
+  background: #ccc;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.container [class*="grid_"],
+.container [class*="col_"]{
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:0 0 20px 0;
+}
+
+.content { background: #fff !important; border: none !important; }
+
+</style>
+
+</head>
+
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+  <div class="container">
+    <div class="grid_12">
+      <fieldset style="margin:20px;"><legend>Teste</legend>
+      <input type="text" style="border:1px solid red;width:100%;"></fieldset>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid_12 content">
+
+      <h1>Título Teste <small>subtítulo teste</small></h1>
+      <h2>Título Teste <small>subtítulo teste</small></h2>
+      <h3>Título Teste <small>subtítulo teste</small></h3>
+
+      <h4>Título Teste <small>subtítulo teste</small></h4>
+      <h5>Título Teste <small>subtítulo teste</small></h5>
+      <h6>Título Teste <small>subtítulo teste</small></h6>
+
+      <ul>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong>
+          <ul>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong>
+          <ul>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong></li>
+      </ul>
+        </li>
+        <li><strong>item</strong></li>
+      </ul>
+        </li>
+        <li><strong>item</strong></li>
+      </ul>
+
+      <ol>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong></li>
+        <li><strong>item</strong></li>
+      </ol>
+
+    </div>
+  </div>
+
+<div class="container responsive">
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1">grid_1</div>
+  <div class="grid_1 last">grid_1</div>
+
+  <div class="grid_2">grid_2</div>
+  <div class="grid_2">grid_2</div>
+  <div class="grid_2">grid_2</div>
+  <div class="grid_2">grid_2</div>
+  <div class="grid_2">grid_2</div>
+  <div class="grid_2 last">grid_2</div>
+
+  <div class="grid_3">grid_3</div>
+  <div class="grid_3">grid_3</div>
+  <div class="grid_3">grid_3</div>
+  <div class="grid_3 last">grid_3</div>
+
+  <div class="grid_4">grid_4</div>
+  <div class="grid_4">grid_4</div>
+  <div class="grid_4 last">grid_4</div>
+
+  <div class="grid_6">grid_6</div>
+  <div class="grid_6 last">grid_6</div>
+
+  <div class="grid_12">grid_12</div>
+</div>
+
+<div class="container responsive">
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+  <div class="col_1">col_1</div>
+
+  <div class="col_2">col_2</div>
+  <div class="col_2">col_2</div>
+  <div class="col_2">col_2</div>
+  <div class="col_2">col_2</div>
+  <div class="col_2">col_2</div>
+  <div class="col_2">col_2</div>
+
+  <div class="col_3">col_3</div>
+  <div class="col_3">col_3</div>
+  <div class="col_3">col_3</div>
+  <div class="col_3">col_3</div>
+
+  <div class="col_4">col_4</div>
+  <div class="col_4">col_4</div>
+  <div class="col_4">col_4</div>
+
+  <div class="col_6">col_6</div>
+  <div class="col_6">col_6</div>
+
+  <div class="col_12">col_12</div>
+</div>
+
+
+
+</body>
+</html>
