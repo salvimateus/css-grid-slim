@@ -68,10 +68,10 @@
 .container [class*='col_'] iframe,
 .container [class*='col_'] img,
 .container [class*='col_'] object,
-.container [class*='col_'] video {
-  max-width: 100% !important;
-  height: auto !important;
-}
+.container [class*='col_'] video { max-width: 100% !important; }
+
+.container [class*='grid_'] img,
+.container [class*='col_'] img { height: auto !important; }
 
 /*
  * #----- Useful -----#
